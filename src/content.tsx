@@ -70,6 +70,7 @@ const PlasmoOverlay = () => {
   Function to generate the dummy response, clears the input field and updates the show command state.
   */
   const handleGenerateClick = () => {
+    if(command.length === 0) return;
     setShowCommand(command)
     setCommand("")
     setDummyResponse(
